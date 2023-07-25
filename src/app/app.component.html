@@ -1,0 +1,43 @@
+
+
+<div class="content">
+<div class="container">
+  <div class="row w-75 m-auto d-flex justify-content-center align-items-center">
+    <div class="col-md-2">
+       <label class="control-label">Select the country </label>
+    </div>
+    <div class="col-md-10">
+      <select class="form-select" aria-label="Default select example" 
+      [(ngModel)]="selectedOption" (ngModelChange)="saveData($event)">
+        <option selected>Select a country</option>
+        <option [value]="country" *ngFor="let country of countryList">{{country}}</option> 
+      </select>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="containTab">
+    <p class="alert alert-warning text-center"  *ngIf="tabList.length == 0">Data is Empty</p>
+    <table *ngIf="tabList.length > 0" class="table table-striped mt-4">
+      <caption class="caption-top">Table Data</caption>
+        <thead>
+            <th>#</th>
+            <th>Country Name</th>
+            <th>Actions</th>
+        </thead>
+        <tbody *ngFor="let data of tabList;let i = index">
+          <tr>
+             <td>{{i+1}}</td>
+             <td>{{data}}</td>
+             <td>
+                 <button class="btn bgEdit"> <i class="fa-regular fa-pen-to-square"></i> Edit</button>
+                 <button class="btn bgdelete"> <i class="fa-solid fa-trash-can"></i> Delete</button>
+             </td>
+          </tr> 
+        </tbody>
+    </table>
+  </div>
+</div>
+</div>
+<router-outlet></router-outlet>

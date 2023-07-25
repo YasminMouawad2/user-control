@@ -1,0 +1,48 @@
+.content{
+    background-color: #FFF5FD;
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    padding: 3rem;
+}
+
+.mat-mdc-select{
+    padding: 12px;
+}
+
+div.mat-mdc-select-panel{
+    margin:  0 10% !important;
+    width: 90%;
+}
+
+.form-select{
+    padding: 10px;
+}
+
+table{
+    text-align: center;
+}
+
+table>thead{
+    line-height: 3;
+}
+
+table .caption-top{
+    text-align: center;
+    background-color: #432C7A;
+    padding: 9px;
+    color: #fff;
+}
+
+.bgEdit{
+    background-color: #80489C;
+    margin-left: 6px;
+    color: #fff;
+}
+
+.bgdelete{
+    background-color: #b42b0d;
+    margin-left: 13px;
+    color: #fff;
+}
